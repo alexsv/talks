@@ -1,3 +1,17 @@
 <h2>Facets</h2>
 
-example of facet call
+<p>an analog to <span style="color:#99f">SELECT field, count(*) FROM x GROUP BY field</span></p>
+
+<pre>
+curl -XPOST 'http://localhost:9200/cars/_search' -d '  
+{
+  facets: {
+    by_manufacturer: {
+      <span style="color:#9f9">terms</span>: { field: "manufacturer" }
+    },
+    stats_year: {
+      <span style="color:#9f9">statistical</span>: { field: "year" }
+    }
+  }
+}'
+</pre>

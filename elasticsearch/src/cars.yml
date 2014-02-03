@@ -18,7 +18,7 @@ cars:
       year: 2000
   suv:
     1: 
-      manufacturer: "Volkswaged"
+      manufacturer: "Volkswagen"
       model: "Tiguan"
       year: 2011
     2:
