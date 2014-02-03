@@ -2,22 +2,23 @@
 
 <pre>
 <h3>adding several documents</h3>
-curl -XPOST \`http://localhost:9200/cars/sedan/2` -d
+curl -XPOST 'http://localhost:9200/cars/sedan/2' -d '
 {  
   manufacturer: "Audi",
   model: "A8"
-}
-curl -XPOST \`http://localhost:9200/cars/sedan/3` -d
+}'
+
+curl -XPOST 'http://localhost:9200/cars/sedan/3' -d '
 {  
   manufacturer: "BMW",
   model: "320"
-}
+}'
 </pre>
 <pre class="fragment">
 <h3>...and one more document of another type (coupe)</h3>
-curl -XPOST \`http://localhost:9200/cars/coupe/4` -d
+curl -XPOST 'http://localhost:9200/cars/coupe/4' -d '
 {  
   manufacturer: "BMW",
   model: "645"
-}
+}'
 </pre>

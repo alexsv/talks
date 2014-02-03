@@ -2,11 +2,11 @@
 
 <pre>
   <h3>how to create a document</h3>
-  # `cars` - index name
-  # `sedan` - document type
-  # 1 - document id
+  # <span style="color:#9f9">cars</span> - index name
+  # <span style="color:#9f9">sedan</span> - document type
+  # <span style="color:#9f9">1</span> - document id
   
-  curl -XPOST \`http://localhost:9200/cars/sedan/1` -d
+  curl -XPOST 'http://localhost:9200/cars/sedan/1' -d '
   {  
     manufacturer: "Audi",
     model: "A4"
@@ -15,10 +15,10 @@
 
 <pre class="fragment">
   <h3>how to update</h3>    
-  curl -XPUT \`http://localhost:9200/cars/sedan/1` -d
+  curl -XPUT 'http://localhost:9200/cars/sedan/1' -d '
   {  
     manufacturer: "Audi",
     model: "A6",
     seats: 4
-  }
+  }'
 </pre>
