@@ -1,0 +1,37 @@
+<h2>query string query</h2>
+
+<pre>
+curl -XGET `http://localhost:9200/cars/_search?q=text:<span style="color:#9f9">ford suv</span>`
+</pre>
+
+<pre>
+# returns mix of Ford models, Ford SUVs and BMW SUVs
+</pre>
+
+<pre>
+curl -XGET
+`http://localhost:9200/cars/_search?q=text:<span style="color:#9f9">ford suv</span>&<span style="color:#99f">default_operator=AND</span>`
+</pre>
+
+<pre style="font-size: 50%">
+  {
+    ...
+    hits: {
+      total: 2, max_score: 0.66605335, 
+      hits: [
+        {
+          _index: "cars", _type: "suv", _id: "4", _score: 0.66605335,
+          _source: {
+            manufacturer: "Ford", model: "Kuga2", year: 2012, id: 4, type: "suv",
+            text: "2012 <span style="color:#9f9">Ford</span> Kuga2 <span style="color:#9f9">Suv</span>"
+          }
+        }, {
+          _index: "cars", _type: "suv", _id: "3", _score: 0.53178954,
+          _source: {
+            manufacturer: "Ford", model: "Kuga", year: 2010, id: 3, type: "suv"
+            text: "2010 <span style="color:#9f9">Ford</span> Kuga <span style="color:#9f9">Suv</span>",
+          }
+        }
+      ]
+  }}
+</pre>

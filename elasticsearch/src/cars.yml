@@ -1,0 +1,44 @@
+cars:
+  sedan:
+    1:
+      manufacturer: "BMW"
+      model: "520"
+      year: 2005
+    2:
+      manufacturer: "Audi"
+      model: "A6"
+      year: 2008
+    3:
+      manufacturer: "Ford"
+      model: "Focus"
+      year: 2010
+    4: 
+      manufacturer: "BMW"
+      model: "325"
+      year: 2000
+  suv:
+    1: 
+      manufacturer: "Volkswaged"
+      model: "Tiguan"
+      year: 2011
+    2:
+      manufacturer: "BMW"
+      model: "X6"
+      year: 2012
+    3: 
+      manufacturer: "Ford"
+      model: "Kuga"
+      year: 2010
+    4:
+      manufacturer: "Ford"
+      model: "Kuga2"
+      year: 2012
+  coupe:
+    1:
+      manufacturer: "BMW"
+      model: "330"
+      year: 2002
+    2:
+      manufacturer: "Ford"
+      model: "Focus ST"
+      year: 2010

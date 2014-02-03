@@ -1,0 +1,9 @@
+<h2>query string query - wildcards</h2>
+<br />
+<pre>
+curl -XGET `http://localhost:9200/cars/_search?q=text:<span style="color:#9f9">f*</span>`
+
+curl -XGET `http://localhost:9200/cars/_search?q=text:<span style="color:#9f9">f?rd</span>`
+
+curl -XGET `http://localhost:9200/cars/_search?q=text:<span style="color:#9f9">*edan</span>` # sedan
+</pre>

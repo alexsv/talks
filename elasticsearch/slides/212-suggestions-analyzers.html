@@ -1,0 +1,24 @@
+<h3>Search suggestions - analyzers</h3>
+<pre>
+{
+   analyzer: {
+     <span style="color: #9f9">index_titles</span>: {
+       type: "custom",
+       tokenizer: "standard",
+       filter: %w(standard lowercase asciifolding <span style="color: #99f">title_edgengram</span>)
+     },
+     <span style="color: #9f9">search_titles</span>: {
+       type: "custom",
+       tokenizer: "standard",
+       filter: %w(standard lowercase asciifolding)
+     }
+   },
+   filter: {
+     <span style="color: #9f9">title_edgengram</span>: {
+       type: "edgeNGram",
+       min_gram: 2,
+       max_gram: 15
+     }
+   }
+ }
+</pre>

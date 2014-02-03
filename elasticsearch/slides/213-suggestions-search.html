@@ -1,0 +1,17 @@
+<h3>Search suggestions - search example</h3>
+<br />
+<p>cities "Spain" and "Spahn"</p>
+
+next terms match corresponding documents:
+
+<pre>
+"Sp"    -> ["Spain", "Spahn"]
+"Spa"   -> ["Spain", "Spahn"]
+"Spai"  -> ["Spain"]
+"Spain" -> ["Spain"]
+"Spah"  -> ["Spah"]
+"Spahn" -> ["Spahn"] 
+
+We search for <span style="color:#9f9">"Spa"</span>, it returns ["Spain", "Spahn"]
+We search for <span style="color:#9f9">"Spai"</span>, it returns ["Spain"]
+</pre>

@@ -1,0 +1,37 @@
+<h2>query string query</h2>
+
+<pre>
+curl -XGET `http://localhost:9200/cars/_search?q=<span style="color:#9f9">text</span>:bmw 520`
+</pre>
+
+<pre style="font-size:40%">
+{
+  took: 3, timed_out: false, _shards: { total: 5, successful: 5, failed: 0 },
+  hits: {
+    total: 4,
+    max_score: 0.79597056,
+    hits: [
+      {
+        _index: "cars", _type: "sedan", _id: "1", <span style="color:#99f">_score: 0.79597056</span>,
+        _source: {
+          manufacturer: "BMW",
+          model: "520",
+          year: 2005,
+          id: 1,
+          <span style="color:#9f9">text</span>: "2005 <span style="color:#99f">BMW 520</span> Sedan",
+          type: "sedan"
+        }
+      },
+      {
+        _index: "cars", _type: "suv", _id: "2", <span style="color:#99f">_score: 0.19551794</span>,
+        _source: {
+          manufacturer: "BMW",
+          model: "X6",
+          year: 2012,
+          id: 2,
+          <span style="color:#9f9">text</span>: "2012 <span style="color:#99f">BMW</span> X6 Suv",
+          type: "suv"
+        }
+      }
+      ....
+</pre>

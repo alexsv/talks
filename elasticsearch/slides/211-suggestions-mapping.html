@@ -1,0 +1,23 @@
+<h3>Search suggestions - mapping</h3>
+<pre>
+{"destination":{
+  "dynamic":"false",
+    "properties":{
+      "query_params": ...
+      <i>
+      "lang_en":{
+        "properties":{
+          "city":{
+            "type":"string",
+            <span style="color: #99f">"index_analyzer":"index_titles"</span>,
+            <span style="color: #9f9">"search_analyzer":"search_titles"</span>
+          },
+          "country": {...} #the same
+          "region": {...} #the same
+          "ski_region": {...} #the same
+      }},
+    </i>
+      "lang_XX": ...
+      "listings_count":{"type":"integer"}
+}}}
+</pre>

@@ -1,0 +1,22 @@
+<h3>Search by filters</h3>
+document mapping:
+<pre>
+#http://127.0.0.1:9200/belvilla_development/estate_object/_mapping
+{
+  estate_object: {
+    properties: {
+      ...
+      booking_days_by_type: {
+        properties: {
+          <span style="color:#9f9">all: { type: "integer" },</span> #20140910
+          nig_1: { type: "integer" },
+          verb_wk: { type: "integer" },
+          ...
+      }},
+      options: { 
+        type: "string", 
+        <span style="color:#99f">index: "not_analyzed"</span>
+      },
+      ...
+}}} 
+</pre>

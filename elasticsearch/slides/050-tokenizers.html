@@ -1,0 +1,17 @@
+<h2>tokenizers</h2>
+<p>split phrase into tokens</p>
+
+<pre>
+# Standard  
+"This is presentation about elasticsearch"
+["this", "presentation", "about", "elasticsearch"]
+# is - in stopwords and not indexed
+
+# ngram - generates combination ngrams (with minimum and max length)
+"hello" with minimum length=2
+["he", "el", "ll", "lo", "hel", "ell", "llo", "hell", "ello", "hello"]
+
+# edge ngram
+"hello"
+["h", "he", "hel", "hell", "hello"]
+</pre>

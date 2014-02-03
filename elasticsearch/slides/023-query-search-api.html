@@ -1,0 +1,17 @@
+<h2>search api endpoints</h2>
+<br />
+<pre>
+# search for "Ford" in `cars` index
+<span style="color:#9f9">curl -XGET `http://localhost:9200/cars/_search?q=ford</span>
+
+# search for "Ford" in ALL indexes all fields
+<span style="color:#9f9">curl -XGET `http://localhost:9200/_search?q=ford</span>
+
+# search for "Ford" in `cars` index and `sedan` doc type
+<span style="color:#9f9">curl -XGET `http://localhost:9200/<span style="color:#99f">cars/sedan/</span>_search?q=ford</span>
+
+# search for "Ford" in `cars` index and `sedan`,`suv` document types
+<span style="color:#9f9">curl -XGET `http://localhost:9200/cars/sedan,suv/_search?q=ford</span>
+
+... or POST request on _search endpoint
+</pre>
