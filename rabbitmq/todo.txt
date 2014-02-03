@@ -1,0 +1,72 @@
+RabbitMQ - advanced usage [draft]
+
+implements AMQP protocol
+
+Basic usage "Producer -> Consumer"
+==================================
+
+            +-------------------+           
+producer -> | exchange -> queue | -> consumer
+            +-------------------+
+
+
+producer                             consumer
+         \  +-------------------+  /
+producer -> | exchange -> queue | -- consumer
+         /  +-------------------+  \ 
+producer                             consumer
+
+
+Fanout
+======
+               +------------------+
+               |            queue | -> consumer(s)
+               |          /       |
+producer(s) -> | exchange - queue | -> consumer(s)
+               |          \       |
+		       |	        queue | -> consumer(s)
+               +------------------+
+
+Routing
+=======
+
+               +----------------------+
+               |            (R) queue | -> consumer(s)
+               |          /           |
+producer(s) -> | exchange - (R) queue | -> consumer(s)
+               |          \           |
+               |            (R) queue | -> consumer(s)
+               +----------------------+
+
+demo using JS simulator
+=======================
+
+
+
+examples
+========
+
+logger
+------
+
+extensions
+==========
+
+message TTL
+
+autodeleted exchange
+autodeleted queue
+
+plugins
+=======
+
+return last 20 messages
+
+
+
+
+
+
+
+
+
