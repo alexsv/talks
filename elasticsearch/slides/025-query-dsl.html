@@ -1,1 +1,24 @@
 <h2>Query DSL</h2>
+
+<pre>
+curl -XPOST 'http://localhost:9200/cars/_search' -d '
+{
+  query: {
+    <span style="color:#9f9">match</span>: {  
+      text: {
+        query: "Ford 2010", operator: "AND"
+      }
+}}}'
+
+# ... returns records with ford AND 2010 in 'text' field
+</pre>
+<br />
+<pre>
+curl -XPOST 'http://localhost:9200/cars/_search' -d '
+{
+  query: {
+    <span style="color:#9f9">match_all</span>: {}
+}}'
+
+# ... returns all records
+</pre>
