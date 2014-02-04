@@ -13,6 +13,8 @@ GEM
     ansi (1.4.3)
     atomic (1.1.14)
     builder (3.1.4)
+    faker (1.2.0)
+      i18n (~> 0.5)
     hashr (0.0.22)
     i18n (0.6.9)
     mime-types (2.1)
@@ -37,4 +39,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  faker
   tire
