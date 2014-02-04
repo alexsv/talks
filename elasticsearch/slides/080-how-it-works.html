@@ -1,7 +1,24 @@
 <h3>so, how it works?</h3>
 
 <pre>
-  1. document is submitted to elasticsearch
-  2. list of tokens generated for every attribute
-  3. index updates - for each token list of documents stored
+<span style="color:#9f9"># document1</span>
+{
+  text: "This presentation is about Elasticsearch"
+}  
+
+<span style="color:#9f9"># document2</span>
+{
+  text: "This is not about SOLR"
+}
+
+<span style="color:#9f9"># terms</span>
+document1: ["this", "presentation", "about", "elasticsearch"]
+document2: ["this", "about", "solr"]
+
+<span style="color:#9f9"># index</span>
+"this":          [ document1, document2 ]
+"presentation":  [ document1 ]
+"about":         [ document1 ]   
+"elasticsearch": [ document1 ]
+"solr":          [ document2 ]
 </pre>
