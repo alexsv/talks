@@ -1,2 +1,25 @@
 <h2>filters</h2> 
-<h3>example</h3>
+<h3>nested dsl example</h3>
+
+<pre>
+curl -XPOST 'http://localhost:9200/cars/_search' -d '
+{
+  <span style="color:#99f">filter</span>: {
+    <span style="color:#9f9">or</span>: [
+      {
+        <span style="color:#9f9">and</span>: [
+          { <span style="color:#9f9">term</span>: { model: "kuga" }},
+          { <span style="color:#9f9">term</span>: { year: 2010 }}
+  	    ]
+      }, {
+        <span style="color:#9f9">and</span>: [
+          { <span style="color:#9f9">term</span>: { manufacturer: "bmw" } },
+          { <span style="color:#9f9">range</span>: { 
+            year: { gte: 2010 }
+          }}
+        ]
+      }
+    ]
+  }
+}'
+</pre>  
