@@ -13,6 +13,7 @@
   "030-filters.html",
   "031-filters-example.html",
   "032-filters-list.html",
+  "033-filters-and-or-bool.html",  
   "040-how-it-works.html",
   "050-tokenizers.html",
   "060-token-filters.html",
