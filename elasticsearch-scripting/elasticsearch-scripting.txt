@@ -10,7 +10,15 @@ Elasticsearch scripting
 7.  support languages: groovy now, mvel is going to be deprecated, javascript, python, ruby
 8.  dynamic scripting vs static scripts
 9.  _scripts index
-10.  lucene static fields
+10. lucene static fields
 11. native scripting
 12. some examples from imotov: LookupScript, RandomSearch
-13. belvilla's cases
+13. groovy scripting examples
+14. groovy scripting - Script class
+15. example to describe number of classes
+16. example to describe static fields
+17. example to describe run() method and script instance
+18. script execution - compilation, instantiation, run()
+19. groovy vs mvel, javascript, python, ruby
+20. performance optimizations
+21. belvilla's cases
